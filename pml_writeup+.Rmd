@@ -54,10 +54,10 @@ selectTrain2 <- selectTrain[,-nonPredictorID]
 
 ### Data Preprocessing - Standardizing
 
-For the 53 numerical variables of the remaining 55 variables (54 feature predictors and 1 outcome variable), the distribution and scale of each variable is investigated by plotting histgorams. However due to limited space, only histograms of the first 16 variables are shown here.
+For the 53 numerical variables of the remaining 55 variables (54 feature predictors and 1 outcome variable), the distribution and scale of each variable is investigated by plotting histgorams. However due to limited space, only histograms of the first 9 variables are shown here.
 ```{r Histograms,echo=TRUE}
-par(mfrow=c(4,4));
-for (i in seq(1,16)){
+par(mfrow=c(3,3));
+for (i in seq(1,9)){
     hist(selectTrain2[,1+i])
 }
 ```
