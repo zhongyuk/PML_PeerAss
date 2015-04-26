@@ -109,10 +109,10 @@ modFit1
 predTest1 <- predict(modFit1,selectTestS)
 predTestRight1 <- selectTestS$classe==predTest1
 print(paste0('The accuracy of fitted Boosted Logistical Regression Model on testing/cross validation set is:',
-             as.character(sum(predTestRight,na.rm=TRUE)/length(predTest))))
+             as.character(sum(predTestRight1,na.rm=TRUE)/length(predTest1))))
 ```
 
-As it is printed out, the accuracy of the best fitted boosted logistic regression model is about 92.76%, however the accuracy on testing/cross validation set is only about 82%. Therefore the estiamted out of sample error is 1-(accuracy on cross validation set), which is about 18%.
+As it is printed out, the accuracy of the best fitted boosted logistic regression model is about 92.84%, however the accuracy on testing/cross validation set is only about 83.5%. Therefore the estiamted out of sample error is 1-(accuracy on cross validation set), which is about 16.5%.
 
 ### Random Forest
 
@@ -125,7 +125,7 @@ print(paste0('The accuracy of fitted Random Forest Model on testing/cross valida
              as.character(sum(predTestRight2)/length(predTest2))))
 ```
 
-As it is printed out, the accuracy of the best fitted boosted logistic regression model is about 99.56%, however the accuracy on testing/cross validation set is about 99.84%. Therefore the estiamted out of sample error is 1-(accuracy on cross validation set), which is about 0.16%.
+As it is printed out, the accuracy of the best fitted boosted logistic regression model is about 99.88%, however the accuracy on testing/cross validation set is about 99.75%. Therefore the estiamted out of sample error is 1-(accuracy on cross validation set), which is about 0.25%.
 
 # Summary
 
